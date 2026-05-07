@@ -1,0 +1,518 @@
+:root {
+  --bg-page: #e9eaed;
+  --bg-card: #f7f7f8;
+  --text: #1c1d20;
+  --muted: #5d6166;
+  --line: #d6d8dc;
+  --brand: #bb8f2f;
+  --brand-dark: #9f7722;
+  --ink: #0f1520;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #f0f1f3 0%, var(--bg-page) 100%);
+  color: var(--text);
+  font-family: "Source Sans 3", "Trebuchet MS", sans-serif;
+}
+
+.page-wrap {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.panel {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--bg-card);
+  border-top: 1px solid #dbdde2;
+  border-bottom: 1px solid #dbdde2;
+  overflow: hidden;
+}
+
+.site-header {
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 2rem;
+  position: relative;
+}
+
+.logo {
+  margin: 0;
+  font-family: "Merriweather", Georgia, serif;
+  font-size: clamp(1.2rem, 2vw, 1.7rem);
+  letter-spacing: 0.01em;
+}
+
+.logo small {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.menu-toggle {
+  border: 1px solid var(--line);
+  background: #fff;
+  color: #222;
+  font-size: 1rem;
+  padding: 0.35rem 0.55rem;
+  display: none;
+}
+
+.site-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 1.4rem;
+  align-items: center;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: #222;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.site-nav a.active {
+  border-bottom: 2px solid var(--brand);
+  padding-bottom: 0.1rem;
+}
+
+.btn-gold {
+  background: linear-gradient(180deg, #cda243, var(--brand));
+  color: #fff;
+  border: 0;
+  font-weight: 700;
+  font-size: 0.98rem;
+  padding: 0.62rem 1.25rem;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16);
+}
+
+.btn-gold:hover {
+  background: linear-gradient(180deg, #bf9539, var(--brand-dark));
+}
+
+.hero {
+  min-height: 360px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 2rem;
+  color: #fff;
+  position: relative;
+}
+
+.hero > div,
+.callout-box,
+.section > * {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero h2 {
+  font-family: "Merriweather", Georgia, serif;
+  font-size: clamp(1.6rem, 3.1vw, 2.8rem);
+  margin: 0 0 0.75rem;
+}
+
+.hero p {
+  margin: 0 auto 1.15rem;
+  max-width: 760px;
+  font-size: clamp(1rem, 1.8vw, 1.3rem);
+}
+
+.feature-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  background: linear-gradient(140deg, #16202f, #1d2a3a);
+  color: #fff;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.feature {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  gap: 0.1rem;
+  padding: 1rem 0.6rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.feature:last-child {
+  border-right: 0;
+}
+
+.section {
+  padding: clamp(1rem, 2vw, 1.9rem);
+}
+
+.section-title {
+  margin: 0;
+  text-align: center;
+  font-family: "Merriweather", Georgia, serif;
+  font-size: clamp(1.4rem, 2.2vw, 2.1rem);
+}
+
+.lead {
+  text-align: center;
+  color: #2d3035;
+  font-size: clamp(0.98rem, 1.7vw, 1.1rem);
+  margin: 0.8rem auto 1.45rem;
+}
+
+.rule {
+  height: 1px;
+  background: var(--line);
+  margin: 0.8rem 0 1.1rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.info-card {
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.info-card h3,
+.info-card h4 {
+  margin: 0;
+  font-family: "Merriweather", Georgia, serif;
+  font-size: clamp(1rem, 1.5vw, 1.14rem);
+}
+
+.info-card .content {
+  padding: 0.8rem;
+}
+
+.info-card p {
+  margin: 0.4rem 0 0;
+  color: var(--muted);
+}
+
+.callout {
+  padding: 2.8rem 1rem;
+}
+
+.callout-box {
+  width: min(90vw, 740px);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #d9dbe0;
+  text-align: center;
+  padding: 1.3rem;
+}
+
+.callout-box h3 {
+  margin: 0;
+  font-family: "Merriweather", Georgia, serif;
+  font-size: clamp(1.3rem, 2.2vw, 2rem);
+}
+
+.tagline {
+  padding: 1rem;
+  text-align: center;
+  font-family: "Merriweather", Georgia, serif;
+  font-style: italic;
+  background: linear-gradient(130deg, #141c28, #1f2b3a);
+  color: #fff;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.services-main,
+.about-main {
+  padding: clamp(1rem, 2vw, 1.7rem);
+}
+
+.services-main h2,
+.about-main h2 {
+  font-family: "Merriweather", Georgia, serif;
+  font-size: clamp(1.7rem, 2.3vw, 2.4rem);
+  margin: 0;
+}
+
+.services-main > .rule,
+.about-main > .rule {
+  margin-bottom: 1.3rem;
+}
+
+.services-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.8rem;
+  margin-bottom: 1.2rem;
+}
+
+.split-card {
+  display: grid;
+  grid-template-columns: 34% 66%;
+  margin-bottom: 1rem;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.split-content {
+  padding: 1rem;
+}
+
+.split-content h3 {
+  margin: 0;
+  font-family: "Merriweather", Georgia, serif;
+  font-size: clamp(1.3rem, 2.2vw, 2rem);
+}
+
+.list-card {
+  display: grid;
+  grid-template-columns: 33% 67%;
+  border: 1px solid var(--line);
+  background: #fff;
+  margin-bottom: 1rem;
+}
+
+.list-card ul {
+  margin: 0.4rem 0 0;
+  padding-left: 1rem;
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.about-card,
+.contact-card {
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.about-card .profile {
+  min-height: 320px;
+  display: grid;
+  align-items: end;
+  padding: 1rem;
+  color: #141414;
+  position: relative;
+}
+
+.about-card .profile .bio {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.88);
+  padding: 0.7rem;
+  max-width: 700px;
+}
+
+.about-card h3 {
+  margin: 0;
+  font-family: "Merriweather", Georgia, serif;
+  font-size: clamp(1.4rem, 2.2vw, 2rem);
+}
+
+.contact-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.contact-pane,
+.form-pane {
+  padding: 1rem;
+}
+
+.contact-intro {
+  padding-bottom: 0.5rem;
+}
+
+.contact-title {
+  font-size: clamp(1.4rem, 2.2vw, 2rem);
+}
+
+.contact-subtitle {
+  margin: 0;
+  font-family: "Merriweather", Georgia, serif;
+}
+
+.flush-top {
+  margin-top: 0;
+}
+
+form {
+  display: grid;
+  gap: 0.45rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.55rem;
+  border: 1px solid var(--line);
+  background: #fbfbfc;
+  font: inherit;
+}
+
+textarea {
+  min-height: 84px;
+  resize: vertical;
+}
+
+.footer-tagline-light {
+  padding: 0.7rem;
+  text-align: center;
+  font-family: "Merriweather", Georgia, serif;
+  font-style: italic;
+  border-top: 1px solid var(--line);
+}
+
+.bg-placeholder {
+  position: relative;
+  overflow: hidden;
+  background-image: linear-gradient(
+      rgba(12, 16, 23, 0.62),
+      rgba(12, 16, 23, 0.52)
+    ),
+    repeating-linear-gradient(
+      45deg,
+      rgba(187, 143, 47, 0.16),
+      rgba(187, 143, 47, 0.16) 20px,
+      rgba(36, 50, 70, 0.36) 20px,
+      rgba(36, 50, 70, 0.36) 40px
+    );
+}
+
+.bg-placeholder::before {
+  content: attr(data-placeholder);
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #f2f4f8;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 0.25rem 0.45rem;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.img-placeholder {
+  min-height: 120px;
+  background: repeating-linear-gradient(
+    -45deg,
+    #d8dbe2,
+    #d8dbe2 14px,
+    #c8ced8 14px,
+    #c8ced8 28px
+  );
+  border-bottom: 1px solid var(--line);
+  display: grid;
+  place-items: center;
+  padding: 0.6rem;
+  text-align: center;
+}
+
+.img-placeholder span {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #223041;
+  text-transform: uppercase;
+}
+
+.thumb,
+.split-media,
+.list-card .media {
+  min-height: 165px;
+}
+
+@media (max-width: 980px) {
+  .card-grid,
+  .services-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .feature-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .split-card,
+  .list-card {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-body {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+
+  .menu-toggle {
+    display: inline-block;
+  }
+
+  .site-nav {
+    position: absolute;
+    right: 0.7rem;
+    top: calc(100% + 0.45rem);
+    background: #fff;
+    border: 1px solid var(--line);
+    box-shadow: 0 6px 18px rgba(9, 10, 16, 0.15);
+    min-width: 190px;
+    display: none;
+    z-index: 10;
+  }
+
+  .site-nav.open {
+    display: block;
+  }
+
+  .site-nav ul {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .site-nav li {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .site-nav li:last-child {
+    border-bottom: 0;
+  }
+
+  .site-nav a {
+    display: block;
+    padding: 0.7rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .card-grid,
+  .services-row {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .site-header {
+    padding: 0.9rem 1rem;
+  }
+}

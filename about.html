@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GRAYT Services | About</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-wrap">
+      <main class="panel">
+        <header class="site-header">
+          <h1 class="logo">GRAYT <small>Services, LLC</small></h1>
+          <button class="menu-toggle" aria-expanded="false" aria-label="Toggle menu">Menu</button>
+          <nav class="site-nav" aria-label="Primary">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a class="active" href="about.html">About</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a class="btn-gold" href="#contact">Learn More</a></li>
+            </ul>
+          </nav>
+        </header>
+
+        <section class="about-main section">
+          <h2>About</h2>
+          <div class="rule"></div>
+
+          <div class="about-layout">
+            <article class="about-card">
+              <div class="profile bg-placeholder" data-placeholder="Background Image Placeholder - Profile Section">
+                <div class="bio">
+                  <h3>LaToya Gray</h3>
+                  <p><strong>Lead Technical Assistance Consultant</strong></p>
+                  <p>Dedicated to empowering contractors to operate, earn, and grow within their industry.</p>
+                </div>
+              </div>
+            </article>
+
+            <article id="contact" class="contact-card">
+              <div class="section contact-intro">
+                <h2 class="contact-title">Contact</h2>
+                <div class="rule"></div>
+                <h3 class="contact-subtitle">Let's Connect</h3>
+              </div>
+
+              <div class="contact-body">
+                <div class="contact-pane">
+                  <h4 class="flush-top">Get in Touch</h4>
+                  <p><strong>Email:</strong> info@graytservices.com</p>
+                  <p><strong>Phone:</strong> (123) 456-7790</p>
+                </div>
+                <div class="form-pane">
+                  <h4 class="flush-top">Schedule a Consultation</h4>
+                  <form>
+                    <input type="text" placeholder="Name" aria-label="Name" />
+                    <input type="email" placeholder="Email" aria-label="Email" />
+                    <input type="text" placeholder="Organization" aria-label="Organization" />
+                    <textarea placeholder="Message" aria-label="Message"></textarea>
+                    <button type="button" class="btn-gold">Submit</button>
+                  </form>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <footer class="footer-tagline-light">From Training to Execution.</footer>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
